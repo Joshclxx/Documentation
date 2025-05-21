@@ -37,8 +37,8 @@ export default function Home() {
             <br />
             <br />
             <span className="font-bold">Close Shift,</span> the process done at
-            the end of a cashier's shift to finalize sales, count cash, and
-            update the system's inventory and transaction logs.
+            the end of a cashier&apos;s shift to finalize sales, count cash, and
+            update the system&apos;s inventory and transaction logs.
             <br />
             <br />
             <span className="font-bold">Dashboard,</span> the main screen users

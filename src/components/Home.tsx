@@ -96,9 +96,9 @@ export default function Home() {
               make data-driven decisions.
               <br />
               <br />
-              Overall, this approach helps the coffee shop's long-term growth
-              and success in addition to improving the effectiveness of everyday
-              operations.
+              Overall, this approach helps the coffee shop&apos;s long-term
+              growth and success in addition to improving the effectiveness of
+              everyday operations.
             </p>
           </section>
         </article>
