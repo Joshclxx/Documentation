@@ -31,7 +31,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
         alt={imageTitle}
         width={317}
         height={217}
-        className="object-cover"
+        className="object-cover p-2"
       />
       <div className="p-4 text-center">
         <h2 className="text-lg font-semibold mb-1">{imageTitle}</h2>

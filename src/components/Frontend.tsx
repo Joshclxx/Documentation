@@ -40,6 +40,30 @@ const Frontend = () => {
       imageDescription:
         "The fourth interface is designed for cashiers to start their workday by opening a shift. It allows them to log the starting cash amount, access the order system, process payments, and monitor daily sales. This interface helps track all transactions accurately and ensures accountability during each shift.",
     },
+    {
+      image: "/image/openshift.png",
+      imageTitle: "Fourth Interface",
+      imageInterface: "Cashier Main Interface (Open Shift)",
+      imageDescription: "",
+    },
+    {
+      image: "/image/openshift.png",
+      imageTitle: "Fourth Interface",
+      imageInterface: "Cashier Main Interface (Open Shift)",
+      imageDescription: "",
+    },
+    {
+      image: "/image/openshift.png",
+      imageTitle: "Fourth Interface",
+      imageInterface: "Cashier Main Interface (Open Shift)",
+      imageDescription: "",
+    },
+    {
+      image: "/image/openshift.png",
+      imageTitle: "Fourth Interface",
+      imageInterface: "Cashier Main Interface (Open Shift)",
+      imageDescription: "",
+    },
   ];
 
   return (
