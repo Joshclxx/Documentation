@@ -15,31 +15,31 @@ export default function PaginatedContent({ currentPage }: Props) {
         </section>
       )}
       {/* FRONTEND */}
-      {currentPage === 1 && (
+      {currentPage === 2 && (
         <section>
           <Home />
         </section>
       )}
       {/* BACKEND */}
-      {currentPage === 1 && (
+      {currentPage === 3 && (
         <section>
           <Home />
         </section>
       )}
       {/* WIREFRAME */}
-      {currentPage === 1 && (
+      {currentPage === 4 && (
         <section>
           <Home />
         </section>
       )}
       {/* POWERED BY */}
-      {currentPage === 1 && (
+      {currentPage === 5 && (
         <section>
           <Home />
         </section>
       )}
       {/* GLOSSARY */}
-      {currentPage === 2 && (
+      {currentPage === 6 && (
         <section>
           <Glossary />
         </section>

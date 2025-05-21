@@ -7,7 +7,7 @@ import SectionContainer from "@/components/SectionContainer";
 import PaginatedContent from "@/components/Pagination";
 const Page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 2;
+  const totalPages = 6;
 
   return (
     <div>
