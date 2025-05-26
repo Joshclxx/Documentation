@@ -6,6 +6,7 @@ import SectionContainer from "./SectionContainer";
 
 const Frontend = () => {
   const [selectedItem, setSelectedItem] = useState<{
+    images: string[];
     imageTitle: string;
     imageInterface: string;
     imageDescription: string;
@@ -13,56 +14,87 @@ const Frontend = () => {
 
   const frontendItems = [
     {
-      image: "/image/login.png",
+      images: ["/image/login.png"],
       imageTitle: "Main Interface",
       imageInterface: "Login System",
       imageDescription:
-        "The main interface of the system is a login screen where users enter their email and password to access the platform. It ensures that only authorized users can access the system by verifying their credentials. Depending on the user&apos;s role—staff, manager, or admin—they are redirected to their respective dashboards. The interface is simple, user-friendly, and includes error prompts for incorrect login attempts.",
+        "The main interface of the system is a login screen where users enter their email and password to access the platform. It ensures that only authorized users can access the system by verifying their credentials. Depending on the user's role—staff, manager, or admin—they are redirected to their respective dashboards. The interface is simple, user-friendly, and includes error prompts for incorrect login attempts.",
     },
     {
-      image: "/image/register.png",
-      imageTitle: "Second Interface",
+      images: ["/image/register.png"],
+      imageTitle: "Admin Dashboard",
       imageInterface: "User Dashboard With Menu",
       imageDescription:
-        "The Second interface is the main dashboard that managers only can see see after logging in. It includes a navigation menu that allows access to key features such as placing orders, viewing the menu, checking order history, and managing account settings. The menu is organized for easy use, ensuring smooth navigation throughout the system.",
+        "The Admin Dashboard allows administrators to register new users by entering their credentials and required information. The data is securely saved to the database, granting users access to the system according to their assigned roles. Only administrators have access to this interface.",
     },
     {
-      image: "/image/product.png",
-      imageTitle: "Third Interface",
+      images: ["/image/product.png"],
+      imageTitle: "Manager Dashboard",
       imageInterface: "Registration System",
       imageDescription:
-        "The Third interface is for new users who need to register an account. It allows them to enter required information, which is then saved directly to the database. This ensures that new users can securely create accounts and gain access to the system based on their role. In this interface, only admin can access.",
+        "The Manager Dashboard is exclusively accessible to managers and is designed for product management tasks. It provides tools to add, edit, or delete menus and menu items.",
     },
     {
-      image: "/image/openshift.png",
-      imageTitle: "Fourth Interface",
-      imageInterface: "Cashier Main Interface (Open Shift)",
+      images: ["/image/openshift.png"],
+      imageTitle: "Open Shift",
+      imageInterface: "Cashier Open Shift",
       imageDescription:
-        "The fourth interface is designed for cashiers to start their workday by opening a shift. It allows them to log the starting cash amount, access the order system, process payments, and monitor daily sales. This interface helps track all transactions accurately and ensures accountability during each shift.",
+        "The Open Shift interface is designed for cashiers to begin their workday by logging the starting cash amount. It grants access to the order system, enables payment processing, and allows monitoring of daily sales through partial sales inventory. This feature ensures accurate transaction tracking and accountability throughout each shift.",
     },
     {
-      image: "/image/openshift.png",
-      imageTitle: "Fourth Interface",
-      imageInterface: "Cashier Main Interface (Open Shift)",
+      images: ["/image/ordersHome.png"],
+      imageTitle: "Orders Home Page",
+      imageInterface: "Cashier Main Interface",
       imageDescription: "",
     },
     {
-      image: "/image/openshift.png",
-      imageTitle: "Fourth Interface",
-      imageInterface: "Cashier Main Interface (Open Shift)",
-      imageDescription: "",
+      images: ["/image/nav.png", "/image/info.png", "/image/poweredby.png"],
+      imageTitle: "POS Navigation Board",
+      imageInterface: "POS Information Board and Navigation",
+      imageDescription:
+        "The POS Information Board and Navigation serves a quick page transfer from orders home page to navigation pages. It shows the POS information such as registered user's logged in and time in also the other credentials regarding on POS Development.",
     },
     {
-      image: "/image/openshift.png",
-      imageTitle: "Fourth Interface",
-      imageInterface: "Cashier Main Interface (Open Shift)",
-      imageDescription: "",
+      images: ["/image/payment.png"],
+      imageTitle: "Orders Payment Options",
+      imageInterface: "Users Payment Method",
+      imageDescription:
+        "The Orders Payment Option is where cashiers process payments. It allows users to select payment methods, enter payment amounts, and finalize transactions. This interface ensures secure and accurate handling of all customer payments.",
     },
     {
-      image: "/image/openshift.png",
-      imageTitle: "Fourth Interface",
-      imageInterface: "Cashier Main Interface (Open Shift)",
-      imageDescription: "",
+      images: ["/image/managersLogin.png"],
+      imageTitle: "Manager Login Interface",
+      imageInterface: "Manager Access Only Features",
+      imageDescription:
+        "The eighth interface is a secure login screen for managers, accessible only within the cashier system. It grants managers access to restricted features such as shift reports, void transactions, and cashpick. Only authorized managers can log in through this interface.",
+    },
+    {
+      images: ["/image/spotcheck-1.png", "/image/spotcheck-2.png"],
+      imageTitle: "Spotcheck",
+      imageInterface: "Partial Sales Inventory",
+      imageDescription:
+        "The Spotcheck system is used to perform partial sales inventory to check during a shift. It allows managers to compare actual cash on hand and POS Cash total, helping to identify if the cash drawer is balance, over, or short compared to the POS Cash Total.",
+    },
+    {
+      images: ["/image/cashpick.png"],
+      imageTitle: "Cashpick",
+      imageInterface: "Manager Cash Drawer Overflow Pick",
+      imageDescription:
+        "The Cashpick operation during a shift. It allows managers to pick, record, and secure excess cash from the drawer, reducing the risk of cash overflow. All cash pick transactions are logged for transparency and accountability.",
+    },
+    {
+      images: ["/image/voidOrder.png", "/image/orderHistory.png"],
+      imageTitle: "Order History and Void Order",
+      imageInterface: "Orders Manipulation",
+      imageDescription:
+        "The Order History and Void Order allows user to view order history and perform void transactions when necessary. Only managers are authorized personnel to access Void Orders with each void action logged for accountability. This interface also provides a detailed record of all past orders for tracking and review.",
+    },
+    {
+      images: ["/image/closeShift.png"],
+      imageTitle: "Close Shift",
+      imageInterface: "Shift Sales Inventory",
+      imageDescription:
+        "The Close Shift, is to records the final cash count, compares it with system sales, and logs any discrepancies. It also updates the shifting inventory, ensuring accurate tracking of remaining stock. This helps maintain transparency and prepares the system for the next shift.",
     },
   ];
 
@@ -75,9 +107,14 @@ const Frontend = () => {
         {frontendItems.map((item, index) => (
           <ImageContainer
             key={index}
-            {...item}
+            image={item.images[0]} // display preview
+            imageTitle={item.imageTitle}
+            imageInterface={item.imageInterface}
+            // imageDescription={item.imageDescription}
+            delay={index * 0.15}
             onClick={() =>
               setSelectedItem({
+                images: item.images,
                 imageTitle: item.imageTitle,
                 imageInterface: item.imageInterface,
                 imageDescription: item.imageDescription,
@@ -88,8 +125,8 @@ const Frontend = () => {
       </div>
 
       {selectedItem && (
-        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center px-4">
-          <div className="bg-white p-6 rounded-lg max-w-md w-full relative text-center">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center px-4 overflow-auto">
+          <div className="bg-white p-6 rounded-lg max-w-3xl w-full relative text-center">
             <button
               onClick={() => setSelectedItem(null)}
               className="absolute top-2 right-4 text-gray-500 hover:text-black text-xl"
@@ -100,6 +137,16 @@ const Frontend = () => {
             <p className="mt-4 text-gray-700 text-justify">
               {selectedItem.imageDescription}
             </p>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {selectedItem.images.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${selectedItem.imageTitle} ${i + 1}`}
+                  className="w-full rounded shadow"
+                />
+              ))}
+            </div>
           </div>
         </div>
       )}
