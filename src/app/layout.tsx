@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollIndicator />
         <main className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] font-sans">
           <div className="w-full max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
             {children}

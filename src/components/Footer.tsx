@@ -21,7 +21,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#1A1A1A] text-[#FFD700] w-full px-4 sm:px-6 md:px-8 py-4 sm:py-6 text-xs sm:text-sm">
+    <footer className="bg-[#1A1A1A] text-[#FFD700] w-full px-4 sm:px-6 md:px-8 py-4 sm:py-6 text-xs sm:text-sm mb-1">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
           {developers.map((dev, index) => (
