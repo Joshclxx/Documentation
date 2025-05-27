@@ -28,20 +28,14 @@ export default function PaginatedContent({ currentPage }: Props) {
           <Home />
         </section>
       )}
-      {/* WIREFRAME */}
+      {/* POWERED BY */}
       {currentPage === 4 && (
         <section>
           <Home />
         </section>
       )}
-      {/* POWERED BY */}
-      {currentPage === 5 && (
-        <section>
-          <Home />
-        </section>
-      )}
       {/* GLOSSARY */}
-      {currentPage === 6 && (
+      {currentPage === 5 && (
         <section>
           <Glossary />
         </section>

@@ -11,7 +11,6 @@ import {
   Home,
   Code,
   Server,
-  Layout,
   Zap,
   Book,
 } from "lucide-react";
@@ -50,9 +49,8 @@ const Page = () => {
     { id: 1, icon: Home, label: "Intro" },
     { id: 2, icon: Code, label: "Frontend" },
     { id: 3, icon: Server, label: "Backend" },
-    { id: 4, icon: Layout, label: "Wireframe" },
-    { id: 5, icon: Zap, label: "Powered" },
-    { id: 6, icon: Book, label: "Glossary" },
+    { id: 4, icon: Zap, label: "Powered" },
+    { id: 5, icon: Book, label: "Glossary" },
   ];
 
   return (
