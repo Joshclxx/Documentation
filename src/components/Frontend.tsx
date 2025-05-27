@@ -18,7 +18,7 @@ const Frontend = () => {
       imageTitle: "Main Interface",
       imageInterface: "Login System",
       imageDescription:
-        "The main interface of the system is a login screen where users enter their email and password to access the platform. It ensures that only authorized users can access the system by verifying their credentials. Depending on the user's role—staff, manager, or admin—they are redirected to their respective dashboards. The interface is simple, user-friendly, and includes error prompts for incorrect login attempts.",
+        "The Main Interface of the system is a login screen where users enter their email and password to access the platform. It ensures that only authorized and registered by the admin users can access the system by verifying their credentials. Depending on the user’s role—cashier or manager, they are redirected to their respective dashboards. The interface is simple, user-friendly, and includes error prompts for incorrect login attempts.",
     },
     {
       images: ["/image/register.png"],
@@ -45,7 +45,8 @@ const Frontend = () => {
       images: ["/image/ordersHome.png"],
       imageTitle: "Orders Home Page",
       imageInterface: "Cashier Main Interface",
-      imageDescription: "",
+      imageDescription:
+        "The Cashier’s Home Page, featuring the orders menu. It allows cashiers to view current orders, add new orders to the queue, remove or edit on going orders, and manage the order flow efficiently. This interface streamlines order processing and helps maintain smooth service during busy periods.",
     },
     {
       images: ["/image/nav.png", "/image/info.png", "/image/poweredby.png"],
@@ -100,44 +101,38 @@ const Frontend = () => {
 
   return (
     <SectionContainer background="min-h-screen w-full mx-auto max-w-[1480px]">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#DAA520] text-center p-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#DAA520] text-center p-3 sm:p-4">
         FRONTEND INTERFACE
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
         {frontendItems.map((item, index) => (
           <ImageContainer
             key={index}
-            image={item.images[0]} // display preview
+            image={item.images[0]}
             imageTitle={item.imageTitle}
             imageInterface={item.imageInterface}
-            // imageDescription={item.imageDescription}
             delay={index * 0.15}
-            onClick={() =>
-              setSelectedItem({
-                images: item.images,
-                imageTitle: item.imageTitle,
-                imageInterface: item.imageInterface,
-                imageDescription: item.imageDescription,
-              })
-            }
+            onClick={() => setSelectedItem(item)}
           />
         ))}
       </div>
 
       {selectedItem && (
-        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center px-4 overflow-auto">
-          <div className="bg-white p-6 rounded-lg max-w-3xl w-full relative text-center">
+        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 overflow-auto">
+          <div className="bg-white p-4 sm:p-6 rounded-lg max-w-3xl w-full relative text-center">
             <button
               onClick={() => setSelectedItem(null)}
               className="absolute top-2 right-4 text-gray-500 hover:text-black text-xl"
             >
               ✕
             </button>
-            <h2 className="text-2xl font-bold">{selectedItem.imageTitle}</h2>
-            <p className="mt-4 text-gray-700 text-justify">
+            <h2 className="text-xl sm:text-2xl font-bold">
+              {selectedItem.imageTitle}
+            </h2>
+            <p className="mt-3 sm:mt-4 text-gray-700 text-justify text-sm sm:text-base">
               {selectedItem.imageDescription}
             </p>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {selectedItem.images.map((src, i) => (
                 <img
                   key={i}

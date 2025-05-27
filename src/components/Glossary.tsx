@@ -3,12 +3,14 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
 
-export default function Home() {
+export default function Glossary() {
   return (
     <SectionContainer background="min-h-screen w-full mx-auto max-w-[1280px]">
-      <div className="max-w-5xl mx-auto p-10 space-y-16">
+      <div className="w-full p-1 sm:p-4 md:p-6 space-y-8 sm:space-y-12 md:space-y-16">
         <section>
-          <h2 className="text-4xl font-semibold text-[#DAA520]">Glossary</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#DAA520]">
+            Glossary
+          </h2>
           <p className="text-lg sm:text-sm md:text-md lg:text-lg leading-8 text-[#4B4B4B] text-justify">
             <span className="font-bold">Admin Interface,</span> the highest
             level of access within the system. Allows the administrator to

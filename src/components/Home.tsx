@@ -6,11 +6,11 @@ import SectionContainer from "./SectionContainer";
 export default function Home() {
   return (
     <SectionContainer background="min-h-screen w-full px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto py-8 md:py-12 space-y-20">
-        <article className="space-y-16">
+      <div className="max-w-[1480px] mx-auto py-6 md:py-8 lg:py-12 space-y-12 md:space-y-16 lg:space-y-20">
+        <article className="space-y-8 md:space-y-12 lg:space-y-16">
           {/* Overview */}
           <section>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#4682B4] mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#4682B4] mb-3 sm:mb-4">
               Overview
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify">
@@ -28,7 +28,7 @@ export default function Home() {
 
           {/* Core Highlights */}
           <section>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#8A2BE2] mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8A2BE2] mb-3 sm:mb-4">
               Core Highlights
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-[#3A3A3A] leading-relaxed text-justify">
@@ -52,13 +52,13 @@ export default function Home() {
 
           {/* Quick Start */}
           <section>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#20B2AA] mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#20B2AA] mb-3 sm:mb-4">
               Quick Start
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#4B4B4B] mb-4">
+            <p className="text-sm sm:text-base md:text-lg text-[#4B4B4B] mb-3 sm:mb-4">
               Clone the repository and start the development server:
             </p>
-            <div className="overflow-x-auto rounded-md bg-[#2E2E2E] text-[#E0E0E0] text-sm p-4 font-mono">
+            <div className="overflow-x-auto rounded-md bg-[#2E2E2E] text-[#E0E0E0] text-xs sm:text-sm p-3 sm:p-4 font-mono">
               <code>
                 git clone https://github.com/Joshclxx/POS-System.git
                 <br />
@@ -76,10 +76,10 @@ export default function Home() {
 
           {/* Introduction */}
           <section>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#DAA520] mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
               Introduction
             </h2>
-            <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-4">
+            <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
               <p>
                 In today&apos;s rapidly evolving digital age, technology plays
                 an increasingly critical role in transforming the way businesses

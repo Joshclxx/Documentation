@@ -2,13 +2,14 @@ import React from "react";
 import Home from "./Home";
 import Frontend from "./Frontend";
 import Glossary from "./Glossary";
+
 interface Props {
   currentPage: number;
 }
 
 export default function PaginatedContent({ currentPage }: Props) {
   return (
-    <div className="max-w-5xl mx-auto p-10 space-y-16">
+    <div className="w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-10 space-y-8 sm:space-y-12 md:space-y-16">
       {/* INTRODUCTION */}
       {currentPage === 1 && (
         <section>
