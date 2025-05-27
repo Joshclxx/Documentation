@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Home";
 import Frontend from "./Frontend";
 import Glossary from "./Glossary";
+import Backend from "./Backend";
 
 interface Props {
   currentPage: number;
@@ -25,7 +26,7 @@ export default function PaginatedContent({ currentPage }: Props) {
       {/* BACKEND */}
       {currentPage === 3 && (
         <section>
-          <Home />
+          <Backend />
         </section>
       )}
       {/* POWERED BY */}
