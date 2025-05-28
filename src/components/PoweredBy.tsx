@@ -118,12 +118,14 @@ const PoweredBy = () => {
                       delay: idx * 0.05,
                     }}
                     viewport={{ once: false, amount: 0.2 }}
-                    className="bg-white rounded-xl shadow-md p-5 border border-gray-100 hover:shadow-lg transition-shadow duration-200 hover:scale-[1.02] hover:bg-gray-600 cursor-pointer"
+                    className="bg-white rounded-xl shadow-md p-5 border border-gray-100 hover:shadow-md hover:bg-gray-100 transition-all duration-200 cursor-pointer group"
                   >
-                    <h3 className="text-lg font-semibold text-[#1E2F5A] mb-2">
+                    <h3 className="text-lg font-semibold text-[#1E2F5A] mb-2 group-hover:text-[#0D1B39] transition-colors duration-200">
                       {title}
                     </h3>
-                    <p className="text-sm text-[#4B4B4B] mb-3">{description}</p>
+                    <p className="text-sm text-[#4B4B4B] mb-3 group-hover:text-[#2A2A2A] transition-colors duration-200">
+                      {description}
+                    </p>
                     <p className="text-sm text-gray-600">
                       <span className="font-semibold">Function: </span>
                       {func}

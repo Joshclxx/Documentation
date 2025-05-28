@@ -72,9 +72,9 @@ const ErrorMessage = () => {
                     delay: index * 0.05,
                   }}
                   viewport={{ once: false, amount: 0.2 }}
-                  className="bg-white border border-gray-100 rounded-lg p-4 sm:p-5 md:p-6 shadow-md hover:shadow-xl hover:scale-[1.02] hover:bg-gray-600 transition-all duration-300 ease-in-out cursor-pointer"
+                  className="bg-white border border-gray-100 rounded-lg p-4 sm:p-5 md:p-6 shadow-md hover:shadow-md hover:bg-gray-100 transition-all duration-200 cursor-pointer group"
                 >
-                  <p className="font-semibold text-[#1E2F5A] text-base sm:text-lg md:text-xl mb-1">
+                  <p className="font-semibold text-[#1E2F5A] text-base sm:text-lg md:text-xl mb-1 group-hover:text-[#0D1B39] transition-colors duration-200">
                     {err.title}
                   </p>
                   {Array.isArray(err.errorCode) ? (
@@ -84,11 +84,11 @@ const ErrorMessage = () => {
                       ))}
                     </ul>
                   ) : (
-                    <p className="mt-2 text-xs text-[#4B4B4B] sm:text-sm md:text-base">
+                    <p className="mt-2 text-xs text-[#4B4B4B] sm:text-sm md:text-base group-hover:text-[#2A2A2A] transition-colors duration-200">
                       {err.errorCode}
                     </p>
                   )}
-                  <p className="mt-2 text-xs sm:text-sm md:text-base text-gray-600">
+                  <p className="mt-2 text-xs sm:text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-200">
                     {err.explanation}
                   </p>
                 </motion.div>
