@@ -3,105 +3,112 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
 
-export default function Home() {
+const Backend = () => {
   return (
-    <SectionContainer background="min-h-screen w-full px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1480px] mx-auto py-6 md:py-8 lg:py-12 space-y-12 md:space-y-16 lg:space-y-20">
-        <div className="space-y-8 md:space-y-12 lg:space-y-16">
-          {/* Overview */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#DAA520] text-center p-3 sm:p-4">
-              BACKEND SYSTEM
-            </h2>
-            <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
-              <p>
-                In today&apos;s rapidly evolving digital age, technology plays
-                an increasingly critical role in transforming the way businesses
-                operate. From large fast-food chains to small local retailers,
-                the integration of automated systems has proven to be a powerful
-                means of enhancing operational efficiency, improving service
-                quality, and ensuring accuracy in day-to-day transactions. As
-                customer expectations continue to rise and the demand for
-                faster, more reliable service increases, businesses must adapt
-                by leveraging digital solutions that streamline their internal
-                processes. One such innovation is the implementation of
-                Point-of-Sale (POS) systems, which have become indispensable
-                tools in the modern commercial landscape.
-              </p>
+    <SectionContainer background="min-h-screen w-full">
+      <div className="w-full py-6 md:py-8 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 space-y-12 md:space-y-16 lg:space-y-20">
+          <div className="space-y-8 md:space-y-12 lg:space-y-16">
+            {/* Overview */}
+            <section>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
+                Backend System
+              </h2>
+              <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
+                <p>
+                  The backend serves as the backbone of the Point-of-Sales (POS)
+                  system, orchestrating the secure storage, processing, and
+                  delivery of data across all functional components. While the
+                  frontend provides the user interface that cashiers, managers,
+                  and admin interact with daily, it is ultimately the backend
+                  that ensures every transaction, inventory update, shift
+                  update, and user action is reliably recorded, validated, and
+                  stored. For our POS system, we implemented a robust backend
+                  architecture built on a carefully selected stack of modern
+                  technologies: Prisma, GraphQL, MySQL, and Apollo. Each plays a
+                  distinct, critical role within the system, and together, they
+                  create a seamless flow of data from the moment a sale is
+                  initiated to the moment reports and analytics are generated
+                  for business insights.
+                </p>
 
-              <p>
-                In response to this growing need, we have developed a
-                comprehensive POS system specifically tailored for a coffee shop
-                environment. The system was designed to address the common
-                challenges faced by small to medium-sized food and beverage
-                establishments, such as inventory mismanagement, order
-                processing errors, and inefficient manual tracking. With these
-                issues in mind, our POS system offers a reliable, user-friendly,
-                and secure platform that simplifies business operations and
-                improves overall productivity.
-              </p>
+                <p>
+                  At the heart of the data layer is{" "}
+                  <span className="font-bold">MySQL</span>, a widely used
+                  relational database management system chosen for its
+                  stability, scalability, and structured data handling. MySQL
+                  stores essential records such as product details, inventory
+                  counts, sales logs, employee accounts, and shift logs. To
+                  interact efficiently with this database, we use Prisma, a
+                  powerful Object-Relational Mapping (ORM) tool that abstracts
+                  raw SQL queries and offers a developer-friendly API for
+                  database operations. Prisma not only accelerates development
+                  by reducing the need to write repetitive queries but also
+                  introduces type safety, migrations, and query optimization,
+                  ensuring both speed and reliability.
+                </p>
 
-              <p>
-                At the core of the system is a secure log-in feature, which
-                ensures that only authorized personnel have access to the
-                platform. This not only protects sensitive business data but
-                also promotes accountability among staff members. The system is
-                structured around three main user interfaces, each carefully
-                crafted to meet the specific needs of different user roles
-                within the coffee shop: the admin, manager, and cashier
-                interfaces.
-              </p>
+                <p>
+                  Layered above this, <span className="font-bold">GraphQL</span>{" "}
+                  serves as the API technology that connects the frontend and
+                  backend. Unlike traditional REST APIs, which require defining
+                  rigid endpoints for each data request, GraphQL allows the
+                  frontend to request exactly the data it needs in a single
+                  query, reducing over-fetching and under-fetching. This
+                  flexibility becomes especially valuable in a POS context,
+                  where the system must handle diverse interactions such as
+                  retrieving current inventory levels, fetching product details,
+                  applying active promotions, recording transactions, and
+                  generating summary reports — all in real time, without
+                  unnecessary delays or redundant data transfer.{" "}
+                  <span className="font-bold">Apollo</span> complements this
+                  setup by managing GraphQL client-server communication,
+                  ensuring smooth query handling, caching, error management, and
+                  state synchronization between the client and server.
+                </p>
 
-              <p>
-                The cashier interface handles straightforward order processing,
-                designed for speed and ease of use, ensuring that transactions
-                are completed efficiently and accurately.
-                <br />
-                <br />
-                The manager interface focuses on product manipulation, allowing
-                managers to add, edit, or remove product details and ensure the
-                product catalog remains current.
-                <br />
-                <br />
-                The admin interface is dedicated to registering new users and
-                updating user data, providing secure management of staff
-                accounts and access rights.
-              </p>
+                <p>
+                  The backend also carries significant responsibility beyond
+                  simple data handling. It enforces{" "}
+                  <span className="font-bold">business logic</span> — for
+                  example, validating discount eligibility, updating stock
+                  levels only after successful transactions, or tracking which
+                  employee performed a given action. It provides security{" "}
+                  <span className="font-bold">mechanisms</span> to prevent
+                  unauthorized access, ensures{" "}
+                  <span className="font-bold">data integrity</span> even under
+                  high load or unexpected failures, and supports scalability to
+                  accommodate growing business demands. In designing this
+                  backend, we deliberately prioritized modularity and
+                  maintainability, ensuring that each part of the system —
+                  whether database, API layer, or client interface — can evolve
+                  or scale independently without causing system-wide
+                  disruptions.
+                </p>
 
-              <p>
-                By consolidating these functionalities into a single, integrated
-                digital platform, our POS system significantly enhances workflow
-                efficiency across all levels of operation. Manual errors—such as
-                incorrect pricing, inventory discrepancies, or missed orders—are
-                drastically reduced, while the automation of routine tasks frees
-                up staff to focus on customer engagement and service quality.
-              </p>
-
-              <p>
-                Moreover, the system&apos;s ability to generate real-time
-                reports and analytics enables the business to adopt a
-                data-driven approach to decision-making. With accurate, timely
-                insights into sales trends, customer preferences, and inventory
-                turnover, management can make strategic adjustments that support
-                the coffee shop&apos;s long-term success. Whether it involves
-                introducing new products, adjusting pricing strategies, or
-                planning marketing campaigns, the data provided by the POS
-                system becomes an invaluable resource.
-              </p>
-
-              <p>
-                In conclusion, the implementation of our tailored POS system
-                goes beyond simply digitizing transactions—it redefines the
-                operational model of the coffee shop by fostering a culture of
-                efficiency, transparency, and informed decision-making. By
-                addressing both current needs and future growth potential, this
-                system positions the business to thrive in an increasingly
-                competitive and technology-driven marketplace.
-              </p>
-            </div>
-          </section>
+                <p>
+                  Ultimately, while the backend may be invisible to end-users,
+                  it is the foundational engine that enables the POS system to
+                  function smoothly and reliably. Without it, there would be no
+                  way to preserve the consistency of sales records, maintain
+                  accurate stock levels, or generate the analytics that inform
+                  business decisions. By leveraging a stack of Prisma, GraphQL,
+                  MySQL, and Apollo, we have built a backend architecture that
+                  not only meets current operational needs but is also
+                  positioned for future enhancements, whether that means
+                  integrating with third-party services, expanding reporting
+                  capabilities, or supporting multi-branch deployments. This
+                  carefully designed backend is what empowers the POS system to
+                  deliver on its promise of efficiency, accuracy, and seamless
+                  customer service.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </SectionContainer>
   );
-}
+};
+
+export default Backend;

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import SectionContainer from "@/components/SectionContainer";
@@ -12,6 +12,9 @@ import {
   Code,
   Server,
   Zap,
+  BugPlay,
+  BookPlus,
+  Layers2,
   Book,
 } from "lucide-react";
 
@@ -45,12 +48,19 @@ const Page = () => {
     };
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
+
   const navItems = [
     { id: 1, icon: Home, label: "Intro" },
     { id: 2, icon: Code, label: "Frontend" },
     { id: 3, icon: Server, label: "Backend" },
     { id: 4, icon: Zap, label: "Powered" },
-    { id: 5, icon: Book, label: "Glossary" },
+    { id: 5, icon: BugPlay, label: "Error" },
+    { id: 6, icon: BookPlus, label: "Additional" },
+    { id: 7, icon: Layers2, label: "Summary" },
+    { id: 8, icon: Book, label: "Glossary" },
   ];
 
   return (
@@ -58,7 +68,7 @@ const Page = () => {
       <Navbar />
 
       <main className="flex-grow">
-        <SectionContainer background="w-full mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+        <SectionContainer background="w-full mx-auto max-w-[1480px] px-1 sm:px-3 lg:px-4">
           <PaginatedContent currentPage={currentPage} />
         </SectionContainer>
       </main>

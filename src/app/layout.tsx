@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "POS System Documentation",
   description:
     "Luxurious, high-end styled documentation page built with Next.js 15",
+  icons: {
+    icon: "icon/heebrew-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +34,7 @@ export default function RootLayout({
       >
         <ScrollIndicator />
         <main className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] font-sans">
-          <div className="w-full max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-[1480px] mx-auto px-2 sm:px-6 lg:px-8">
             {children}
           </div>
         </main>
