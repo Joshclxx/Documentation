@@ -34,7 +34,8 @@ export function Footer() {
 
         <div className="mt-6 sm:mt-8 border-t border-[#FFD700]/30 pt-4 text-center">
           <p>
-            &copy; {new Date().getFullYear()} Documentation Created By: Joshclxx
+            &copy; {new Date().getFullYear()} This documentation template
+            created by: Joshclxx
           </p>
         </div>
       </div>
