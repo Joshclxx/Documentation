@@ -14,9 +14,9 @@ export function Footer() {
       name: "Jenelyn Manalo",
       role: "UI/UX Designer (Wireframes & Figma Design)",
     },
+    { name: "Jessie Nino Manila", role: "Planning & Documentation" },
     { name: "Mariel Krisjean Alaan", role: "Planning & Documentation" },
     { name: "Michaella Bacudo", role: "Planning & Documentation" },
-    { name: "Jessie Nino Manila", role: "Planning & Documentation" },
     { name: "Allyssa Dizon", role: "Planning & Documentation" },
   ];
 
