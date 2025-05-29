@@ -1,9 +1,6 @@
 import React from "react";
-import { useTheme } from "next-themes";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
-
   return (
     <header className="bg-[#1A1A1A] mt-1 text-[#D4AF37] w-full shadow-xl">
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 max-w-7xl mx-auto">
