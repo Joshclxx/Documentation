@@ -96,6 +96,22 @@ const poweredByData = [
   },
 ];
 
+const iconMap: Record<string, string> = {
+  "Next.js": "/icon/nextjs.svg",
+  TypeScript: "/icon/ts.svg",
+  React: "/icon/react.svg",
+  "Tailwind CSS": "/icon/tailwind.svg",
+  Prisma: "/icon/prisma.svg",
+  GraphQL: "/icon/graphql.svg",
+  MySQL: "/icon/mysql.svg",
+  "Apollo Server": "/icon/apollo.svg",
+  Electron: "/icon/electron.svg",
+  Git: "/icon/git.svg",
+  GitHub: "/icon/github.svg",
+  "Node.js": "/icon/node.svg",
+  Figma: "/icon/figma.svg",
+};
+
 const PoweredBy = () => {
   return (
     <SectionContainer background="min-h-screen w-full">
@@ -118,20 +134,29 @@ const PoweredBy = () => {
                       delay: idx * 0.05,
                     }}
                     viewport={{ once: false, amount: 0.2 }}
-                    className="
-                    bg-[var(--background)] text-[var(--foreground)]
-                    rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
-                    hover:scale-[1.02] hover:shadow-md
-                    transition-all duration-300 ease-in-out cursor-pointer
-                  "
+                    className="relative bg-[var(--background)] text-[var(--foreground)]
+                    rounded-xl p-4 pt-16 sm:p-5 md:p-6 shadow-md border border-gray-200
+                    hover:scale-[1.02] hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer"
                   >
-                    <h3 className="text-lg font-semibold text-foreground dark:text-foregound mb-2 group-hover:text-[#0D1B39] transition-colors duration-200">
+                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                      <div className="animated-border">
+                        <div className="animated-border-inner">
+                          <img
+                            src={iconMap[title] || "/icon/default.svg"}
+                            alt={`${title} icon`}
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg font-semibold text-foreground dark:text-foreground mb-2">
                       {title}
                     </h3>
-                    <p className="text-sm text-foreground dark:text-foregound mb-3 group-hover:text-[#2A2A2A] transition-colors duration-200">
+                    <p className="text-sm text-foreground dark:text-foreground mb-3">
                       {description}
                     </p>
-                    <p className="text-sm text-foreground dark:text-foregound">
+                    <p className="text-sm text-foreground dark:text-foreground">
                       <span className="font-semibold">Function: </span>
                       {func}
                     </p>
