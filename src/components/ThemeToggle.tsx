@@ -10,7 +10,7 @@ export default function ThemeToggle() {
     <div className="fixed top-3 right-3 z-50">
       <button
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        className="p-2 hover:bg-gray-200 rounded dark:hover:bg-gray-700 transition-colors hover:rounded-full"
       >
         {theme === "light" ? (
           <Moon className="w-6 h-6 text-[#DAA520]" />

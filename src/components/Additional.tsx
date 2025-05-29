@@ -1,13 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionContainer from "./SectionContainer";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Additional = () => {
+  const sectionRef = useRef(null);
+  const conclusionRef = useRef(null);
+
+  const sectionInView = useInView(sectionRef, { once: true });
+  const conclusionInView = useInView(conclusionRef, { once: true });
+
   return (
     <SectionContainer background="min-h-screen w-full">
       <div className="w-full py-6 md:py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 space-y-12 md:space-y-16 lg:space-y-20">
           <div className="space-y-8 md:space-y-12 lg:space-y-16">
-            <section>
+            <motion.section
+              ref={sectionRef}
+              variants={fadeUp}
+              initial="hidden"
+              animate={sectionInView ? "visible" : "hidden"}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
                 The Importance and Uses of Front-End, Back-End, Command, and
                 Wireframe in a System
@@ -96,6 +116,15 @@ const Additional = () => {
                   </li>
                 </ul>
               </div>
+            </motion.section>
+
+            <motion.section
+              ref={conclusionRef}
+              variants={fadeUp}
+              initial="hidden"
+              animate={conclusionInView ? "visible" : "hidden"}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4 mt-9">
                 Conclusion
               </h2>
@@ -130,7 +159,7 @@ const Additional = () => {
                   reliable platform for businesses of any size.
                 </p>
               </div>
-            </section>
+            </motion.section>
           </div>
         </div>
       </div>

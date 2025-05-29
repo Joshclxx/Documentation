@@ -120,7 +120,8 @@ const Frontend = () => {
       {selectedItem && (
         <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 overflow-auto">
           <div
-            className="bg-[var(--background)] text-[var(--foreground)]
+            className="
+                bg-[var(--background)] text-[var(--foreground)]
                 rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
                 hover:scale-[1.02] hover:shadow-md
                 transition-all duration-300 ease-in-out cursor-pointer"
@@ -134,7 +135,7 @@ const Frontend = () => {
             <h2 className="text-xl sm:text-2xl font-bold">
               {selectedItem.imageTitle}
             </h2>
-            <p className="mt-3 sm:mt-4 text-foreground dark:text-foregound text-justify text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 text-gray-700 text-justify text-sm sm:text-base">
               {selectedItem.imageDescription}
             </p>
             <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">

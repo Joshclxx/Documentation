@@ -1,14 +1,30 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionContainer from "./SectionContainer";
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Summary = () => {
+  const summaryRef = useRef(null);
+  const summaryInView = useInView(summaryRef, { once: true });
+
   return (
     <SectionContainer background="min-h-screen w-full">
       <div className="w-full py-6 md:py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 space-y-12 md:space-y-16 lg:space-y-20">
           <div className="space-y-8 md:space-y-12 lg:space-y-16">
-            {/* Overview */}
-            <section>
+            <motion.section
+              ref={summaryRef}
+              variants={fadeUp}
+              initial="hidden"
+              animate={summaryInView ? "visible" : "hidden"}
+              transition={{ duration: 0.6 }}
+            >
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
                 Overall Summary
               </h2>
@@ -92,7 +108,7 @@ const Summary = () => {
                   next shift.
                 </p>
               </div>
-            </section>
+            </motion.section>
           </div>
         </div>
       </div>
