@@ -12,8 +12,9 @@
 
 body {
   background-color: var(--background);
-  color: var(--foreground); /* This will now properly toggle in both modes */
+  color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Optional scrollbar hiding */
@@ -24,4 +25,26 @@ body {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes theme-spread {
+  0% {
+    clip-path: circle(0% at var(--x, 80%) var(--y, 80%));
+    opacity: 0.5;
+  }
+  100% {
+    clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+    opacity: 0;
+  }
+}
+
+.theme-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--background);
+  pointer-events: none;
+  animation: theme-spread 1s ease-out forwards;
+  will-change: clip-path, opacity;
+  mix-blend-mode: normal;
 }

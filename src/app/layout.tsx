@@ -4,6 +4,7 @@ import "./globals.css";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import { ThemeProvider } from "next-themes";
 import ThemeToggle from "@/components/ThemeToggle";
+import ThemeTransition from "@/components/ThemeTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class">
+          <ThemeTransition />
           <ThemeToggle />
           <ScrollIndicator />
           <main className="min-h-screen bg-background text-foreground font-sans">
