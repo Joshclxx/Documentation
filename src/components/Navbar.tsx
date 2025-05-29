@@ -1,8 +1,24 @@
 import React from "react";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 
 export function Navbar() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className="bg-[#1A1A1A] mt-1 text-[#D4AF37] w-full shadow-xl">
+      <div className="absolute top-2 right-2">
+        <button
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        >
+          {theme === "light" ? (
+            <Moon className="w-5 h-5" />
+          ) : (
+            <Sun className="w-5 h-5" />
+          )}
+        </button>
+      </div>
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 md:gap-6 text-center sm:text-left">
           <div className="flex flex-col items-center sm:items-start gap-1 sm:gap-2 md:gap-4">

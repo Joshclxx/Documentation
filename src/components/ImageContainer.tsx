@@ -29,7 +29,12 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.4, ease: "easeOut", delay }}
       onClick={onClick}
-      className="flex flex-col items-center w-full max-w-xs sm:max-w-sm md:max-w-md rounded-lg overflow-hidden shadow-md bg-white cursor-pointer hover:scale-105 transition-transform"
+      className="
+      bg-[var(--background)] text-[var(--foreground)]
+      rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
+      hover:scale-[1.02] hover:shadow-md
+      transition-all duration-300 ease-in-out cursor-pointer
+    "
     >
       <div className="w-full h-48 sm:h-56 md:h-64 relative">
         <Image

@@ -217,7 +217,12 @@ const Glossary = () => {
                   delay: index * 0.05,
                 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className="bg-white rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-100 hover:scale-[1.02] hover:shadow-md hover:bg-gray-100 transition-all duration-300 ease-in-out cursor-pointer"
+                className="
+                bg-[var(--background)] text-[var(--foreground)]
+                rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
+                hover:scale-[1.02] hover:shadow-md
+                transition-all duration-300 ease-in-out cursor-pointer
+              "
               >
                 <p className="font-bold text-[#4B4B4B] text-base sm:text-lg md:text-xl mb-1">
                   {err.title}

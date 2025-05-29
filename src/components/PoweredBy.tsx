@@ -118,7 +118,12 @@ const PoweredBy = () => {
                       delay: idx * 0.05,
                     }}
                     viewport={{ once: false, amount: 0.2 }}
-                    className="bg-white rounded-xl shadow-md p-5 border border-gray-100 hover:shadow-md hover:bg-gray-100 transition-all duration-200 cursor-pointer group"
+                    className="
+                    bg-[var(--background)] text-[var(--foreground)]
+                    rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
+                    hover:scale-[1.02] hover:shadow-md
+                    transition-all duration-300 ease-in-out cursor-pointer
+                  "
                   >
                     <h3 className="text-lg font-semibold text-[#1E2F5A] mb-2 group-hover:text-[#0D1B39] transition-colors duration-200">
                       {title}

@@ -119,7 +119,12 @@ const Frontend = () => {
 
       {selectedItem && (
         <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 overflow-auto">
-          <div className="bg-white p-4 sm:p-6 rounded-lg max-w-3xl w-full relative text-center">
+          <div
+            className="bg-[var(--background)] text-[var(--foreground)]
+                rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
+                hover:scale-[1.02] hover:shadow-md
+                transition-all duration-300 ease-in-out cursor-pointer"
+          >
             <button
               onClick={() => setSelectedItem(null)}
               className="absolute top-2 right-4 text-gray-500 hover:text-black text-xl"

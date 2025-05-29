@@ -64,7 +64,7 @@ const Page = () => {
   ];
 
   return (
-    <div className="bg-[#f8f8f8] min-h-screen flex flex-col">
+    <div className="bg-background min-h-screen flex flex-col">
       <Navbar />
 
       <main className="flex-grow">
