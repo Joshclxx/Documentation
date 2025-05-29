@@ -1,11 +1,9 @@
 "use client";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 let timeout: NodeJS.Timeout;
 
 export default function ThemeTransition() {
-  const { theme } = useTheme();
   const [coords, setCoords] = useState({ x: "50%", y: "50%" });
   const [visible, setVisible] = useState(false);
 
