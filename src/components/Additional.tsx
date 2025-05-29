@@ -12,7 +12,7 @@ const Additional = () => {
                 The Importance and Uses of Front-End, Back-End, Command, and
                 Wireframe in a System
               </h2>
-              <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
+              <div className="text-sm sm:text-base md:text-lg text-foreground dark:text-foregound leading-relaxed text-justify space-y-3 sm:space-y-4">
                 <p>
                   <strong>1. Front-End:</strong> The front-end is the part of
                   the system that users directly interact with — it’s what they
@@ -100,7 +100,7 @@ const Additional = () => {
                 Conclusion
               </h2>
 
-              <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
+              <div className="text-sm sm:text-base md:text-lg text-foreground dark:text-foregound leading-relaxed text-justify space-y-3 sm:space-y-4">
                 <p>
                   In conclusion, the development of our Point-of-Sale system
                   provides a modern, efficient, and reliable solution tailored

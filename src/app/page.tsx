@@ -81,7 +81,7 @@ const Page = () => {
         }`}
       >
         <div className="flex justify-center mb-4">
-          <div className="flex items-center bg-white rounded-full shadow-lg px-2 py-1 border border-gray-200 w-full max-w-md justify-between sm:justify-center">
+          <div className="flex items-center bg-[#2F2C30]/90 text-white rounded-full shadow-lg px-2 py-1 border border-gray-200 w-full max-w-md justify-between sm:justify-center">
             <button
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
@@ -92,20 +92,25 @@ const Page = () => {
 
             <div className="flex overflow-x-auto gap-1 sm:gap-2 px-1 sm:px-2 no-scrollbar">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setCurrentPage(item.id)}
-                  className={`flex flex-col items-center justify-center flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 p-1 rounded-full ${
-                    currentPage === item.id
-                      ? "bg-[#D4AF37] text-white"
-                      : "hover:bg-gray-100"
-                  } transition-colors`}
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span className="text-[10px] sm:text-xs mt-1 leading-tight text-center">
+                <div key={item.id} className="relative group">
+                  <button
+                    onClick={() => setCurrentPage(item.id)}
+                    className={`flex flex-col items-center justify-center flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 p-1 rounded-full ${
+                      currentPage === item.id
+                        ? "bg-[#D4AF37]/50 text-white"
+                        : "hover:bg-black/15"
+                    } transition-colors`}
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span className="text-[10px] sm:text-xs mt-1 leading-tight text-center">
+                      {item.label}
+                    </span>
+                  </button>
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 whitespace-nowrap">
                     {item.label}
-                  </span>
-                </button>
+                  </div>
+                </div>
               ))}
             </div>
 

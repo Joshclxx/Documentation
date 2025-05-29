@@ -125,13 +125,13 @@ const PoweredBy = () => {
                     transition-all duration-300 ease-in-out cursor-pointer
                   "
                   >
-                    <h3 className="text-lg font-semibold text-[#1E2F5A] mb-2 group-hover:text-[#0D1B39] transition-colors duration-200">
+                    <h3 className="text-lg font-semibold text-foreground dark:text-foregound mb-2 group-hover:text-[#0D1B39] transition-colors duration-200">
                       {title}
                     </h3>
-                    <p className="text-sm text-[#4B4B4B] mb-3 group-hover:text-[#2A2A2A] transition-colors duration-200">
+                    <p className="text-sm text-foreground dark:text-foregound mb-3 group-hover:text-[#2A2A2A] transition-colors duration-200">
                       {description}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-foreground dark:text-foregound">
                       <span className="font-semibold">Function: </span>
                       {func}
                     </p>

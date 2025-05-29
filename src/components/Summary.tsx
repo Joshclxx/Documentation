@@ -12,7 +12,7 @@ const Summary = () => {
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
                 Overall Summary
               </h2>
-              <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
+              <div className="text-sm sm:text-base md:text-lg text-foreground dark:text-foregound leading-relaxed text-justify space-y-3 sm:space-y-4">
                 <p>
                   A Point-of-Sale (POS) and inventory management system relies
                   on multiple interconnected interfaces to ensure seamless,

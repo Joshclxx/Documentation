@@ -224,10 +224,10 @@ const Glossary = () => {
                 transition-all duration-300 ease-in-out cursor-pointer
               "
               >
-                <p className="font-bold text-[#4B4B4B] text-base sm:text-lg md:text-xl mb-1">
+                <p className="font-bold text-foreground dark:text-foregound text-base sm:text-lg md:text-xl mb-1">
                   {err.title}
                 </p>
-                <p className="mt-2 text-xs sm:text-sm text-gray-600 md:text-base">
+                <p className="mt-2 text-xs sm:text-sm text-foreground dark:text-foregound md:text-base">
                   {err.explanation}
                 </p>
               </motion.div>

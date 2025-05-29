@@ -134,7 +134,7 @@ const Frontend = () => {
             <h2 className="text-xl sm:text-2xl font-bold">
               {selectedItem.imageTitle}
             </h2>
-            <p className="mt-3 sm:mt-4 text-gray-700 text-justify text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 text-foreground dark:text-foregound text-justify text-sm sm:text-base">
               {selectedItem.imageDescription}
             </p>
             <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">

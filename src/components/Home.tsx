@@ -13,7 +13,7 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#4682B4] mb-3 sm:mb-4">
               Overview
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify">
+            <p className="text-foreground dark:text-foregound text-sm sm:text-base md:text-lg leading-relaxed text-justify">
               This documentation introduces a purpose-built POS (Point of Sale)
               system designed specifically for coffee shop operations. Developed
               with Next.js 15 and Tailwind CSS, the system features a fixed
@@ -31,7 +31,7 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8A2BE2] mb-3 sm:mb-4">
               Core Highlights
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#3A3A3A] leading-relaxed text-justify">
+            <p className="text-foreground dark:text-foregound text-sm sm:text-base md:text-lg leading-relaxed text-justify">
               This POS system is built with a fixed desktop layout, offering a
               stable and intuitive interface tailored for in-store use. It
               features a secure login system that restricts access to authorized
@@ -55,7 +55,7 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#20B2AA] mb-3 sm:mb-4">
               Quick Start
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#4B4B4B] mb-3 sm:mb-4">
+            <p className="text-foreground dark:text-foregound text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
               Clone the repository and start the development server:
             </p>
             <div className="overflow-x-auto rounded-md bg-[#2E2E2E] text-[#E0E0E0] text-xs sm:text-sm p-3 sm:p-4 font-mono">
@@ -79,20 +79,14 @@ export default function Home() {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#DAA520] mb-3 sm:mb-4">
               Introduction
             </h2>
-            <div className="text-sm sm:text-base md:text-lg text-[#4B4B4B] leading-relaxed text-justify space-y-3 sm:space-y-4">
+            <div className="text-sm sm:text-base md:text-lg text-foreground dark:text-foregound leading-relaxed text-justify space-y-3 sm:space-y-4">
               <p>
                 In today&apos;s rapidly evolving digital age, technology plays
                 an increasingly critical role in transforming the way businesses
                 operate. From large fast-food chains to small local retailers,
                 the integration of automated systems has proven to be a powerful
                 means of enhancing operational efficiency, improving service
-                quality, and ensuring accuracy in day-to-day transactions. As
-                customer expectations continue to rise and the demand for
-                faster, more reliable service increases, businesses must adapt
-                by leveraging digital solutions that streamline their internal
-                processes. One such innovation is the implementation of
-                Point-of-Sale (POS) systems, which have become indispensable
-                tools in the modern commercial landscape.
+                quality, and ensuring accuracy in day-to-day transactions.
               </p>
 
               <p>
@@ -101,10 +95,7 @@ export default function Home() {
                 environment. The system was designed to address the common
                 challenges faced by small to medium-sized food and beverage
                 establishments, such as inventory mismanagement, order
-                processing errors, and inefficient manual tracking. With these
-                issues in mind, our POS system offers a reliable, user-friendly,
-                and secure platform that simplifies business operations and
-                improves overall productivity.
+                processing errors, and inefficient manual tracking.
               </p>
 
               <p>
@@ -112,10 +103,9 @@ export default function Home() {
                 ensures that only authorized personnel have access to the
                 platform. This not only protects sensitive business data but
                 also promotes accountability among staff members. The system is
-                structured around three main user interfaces, each carefully
-                crafted to meet the specific needs of different user roles
-                within the coffee shop: the admin, manager, and cashier
-                interfaces.
+                structured around three main user interfaces—admin, manager, and
+                cashier—each carefully crafted to meet the specific needs of
+                different user roles within the coffee shop.
               </p>
 
               <p>
@@ -149,20 +139,14 @@ export default function Home() {
                 data-driven approach to decision-making. With accurate, timely
                 insights into sales trends, customer preferences, and inventory
                 turnover, management can make strategic adjustments that support
-                the coffee shop&apos;s long-term success. Whether it involves
-                introducing new products, adjusting pricing strategies, or
-                planning marketing campaigns, the data provided by the POS
-                system becomes an invaluable resource.
+                the coffee shop&apos;s long-term success.
               </p>
 
               <p>
                 In conclusion, the implementation of our tailored POS system
                 goes beyond simply digitizing transactions—it redefines the
                 operational model of the coffee shop by fostering a culture of
-                efficiency, transparency, and informed decision-making. By
-                addressing both current needs and future growth potential, this
-                system positions the business to thrive in an increasingly
-                competitive and technology-driven marketplace.
+                efficiency, transparency, and informed decision-making.
               </p>
             </div>
           </section>

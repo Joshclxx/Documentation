@@ -49,7 +49,9 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
         <h2 className="text-base sm:text-lg md:text-xl font-bold tracking-tight">
           {imageTitle}
         </h2>
-        <p className="text-xs sm:text-sm text-gray-600">{imageInterface}</p>
+        <p className="text-xs sm:text-sm text-foreground dark:text-foregound">
+          {imageInterface}
+        </p>
       </div>
     </motion.div>
   );

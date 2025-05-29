@@ -79,21 +79,21 @@ const ErrorMessage = () => {
                   transition-all duration-300 ease-in-out cursor-pointer
                 "
                 >
-                  <p className="font-semibold text-[#1E2F5A] text-base sm:text-lg md:text-xl mb-1 group-hover:text-[#0D1B39] transition-colors duration-200">
+                  <p className="font-semibold text-foreground dark:text-foregound text-base sm:text-lg md:text-xl mb-1 group-hover:text-[#0D1B39] transition-colors duration-200">
                     {err.title}
                   </p>
                   {Array.isArray(err.errorCode) ? (
-                    <ul className="mt-2 text-xs sm:text-sm md:text-base text-gray-600">
+                    <ul className="mt-2 text-xs sm:text-sm md:text-base text-foreground dark:text-foregound">
                       {err.errorCode.map((code, i) => (
                         <li key={i}>{code}</li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="mt-2 text-xs text-[#4B4B4B] sm:text-sm md:text-base group-hover:text-[#2A2A2A] transition-colors duration-200">
+                    <p className="mt-2 text-xs text-foreground dark:text-foregound sm:text-sm md:text-base group-hover:text-[#2A2A2A] transition-colors duration-200">
                       {err.errorCode}
                     </p>
                   )}
-                  <p className="mt-2 text-xs sm:text-sm md:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-200">
+                  <p className="mt-2 text-xs sm:text-sm md:text-base text-foreground dark:text-foregound group-hover:text-gray-800 transition-colors duration-200">
                     {err.explanation}
                   </p>
                 </motion.div>

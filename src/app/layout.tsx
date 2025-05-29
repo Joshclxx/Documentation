@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class">
           <ScrollIndicator />
-          <main className="min-h-screen bg-background text-[#1A1A1A] font-sans">
+          <main className="min-h-screen bg-background text-foreground font-sans">
             <div className="w-full max-w-[1480px] mx-auto px-2 sm:px-6 lg:px-8">
               {children}
             </div>
