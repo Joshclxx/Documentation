@@ -10,6 +10,9 @@ const Frontend = () => {
     imageTitle: string;
     imageInterface: string;
     imageDescription: string;
+    imageSubTitle?: string;
+    imageSubDescription?: string;
+    imageExplanation?: string;
   } | null>(null);
 
   const frontendItems = [
@@ -96,6 +99,11 @@ const Frontend = () => {
       imageInterface: "Shift Sales Inventory",
       imageDescription:
         "The Close Shift, is to records the final cash count, compares it with system sales, and logs any discrepancies. It also updates the shifting inventory, ensuring accurate tracking of remaining stock. This helps maintain transparency and prepares the system for the next shift.",
+      imageSubTitle: "Computation",
+      imageSubDescription:
+        "Starting Cash + POS Total Cash = N\n\nN - Cashpick - Void Order = POS Total Sales",
+      imageExplanation:
+        "Actual Cash On Hand input field for the actual cash amount inside the POS Drawer. It may automatically tally the total sales of POS System into the drawer cash if it is equal, over, or short in sales.",
     },
   ];
 
@@ -121,23 +129,46 @@ const Frontend = () => {
         <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 overflow-auto">
           <div
             className="
-                bg-[var(--background)] text-[var(--foreground)]
-                rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
-                hover:scale-[1.02] hover:shadow-md
-                transition-all duration-300 ease-in-out cursor-pointer"
+              relative bg-[var(--background)] text-[var(--foreground)]
+              rounded-xl p-4 sm:p-5 md:p-6 shadow-md border border-gray-200
+              hover:scale-[1.02] hover:shadow-md
+              transition-all duration-300 ease-in-out cursor-pointer"
           >
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute top-2 right-4 text-gray-500 hover:text-black text-xl"
+              className="absolute top-2 right-4 text-foreground dark:text-foregound hover:font-bold text-xl"
             >
               ✕
             </button>
-            <h2 className="text-xl sm:text-2xl font-bold">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#DAA520]">
               {selectedItem.imageTitle}
             </h2>
-            <p className="mt-3 sm:mt-4 text-gray-700 text-justify text-sm sm:text-base">
+            <p className="mt-3 sm:mt-4 text-foreground dark:text-foregound text-justify text-sm sm:text-base whitespace-pre-line">
               {selectedItem.imageDescription}
             </p>
+
+            {selectedItem.imageSubTitle && (
+              <div className="mt-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#DAA520]">
+                  {selectedItem.imageSubTitle}
+                </h3>
+                <p className="text-foreground dark:text-foregound text-sm sm:text-base whitespace-pre-line">
+                  {selectedItem.imageSubDescription}
+                </p>
+              </div>
+            )}
+
+            {selectedItem.imageExplanation && (
+              <div className="mt-4">
+                <h4 className="text-md sm:text-lg font-semibold">
+                  Explanation
+                </h4>
+                <p className="text-foreground dark:text-foregound text-sm sm:text-base text-justify">
+                  {selectedItem.imageExplanation}
+                </p>
+              </div>
+            )}
+
             <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {selectedItem.images.map((src, i) => (
                 <img
